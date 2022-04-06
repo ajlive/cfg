@@ -1,0 +1,26 @@
+{
+	"twitter link": {
+		"prefix": "ltc",
+		"body": "[@longtallcity](https://twitter.com/longtallcity)"
+	},
+	"key caps lock": {
+		"prefix": "keycaps",
+		"body": "⇪"
+	},
+	"key command": {
+		"prefix": "keycommand",
+		"body": "⌘"
+	},
+	"key control": {
+		"prefix": "keycontrol",
+		"body": "⌃"
+	},
+	"key option": {
+		"prefix": "keyoption",
+		"body": "⌥"
+	},
+	"key shift": {
+		"prefix": "keyshift",
+		"body": "⇧"
+	}
+}

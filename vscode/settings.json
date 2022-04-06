@@ -1,0 +1,138 @@
+{
+	// ==========
+	// appearance
+	// ==========
+
+	// White, the greatest theme of all time
+	"workbench.colorTheme": "White", // https://marketplace.visualstudio.com/items?itemName=arthurwhite.white
+
+	// display full(er) paths in tabs and window title
+	"window.title": "${activeEditorLong}${separator}${rootName}",
+	"workbench.editor.labelFormat": "medium",
+
+	"editor.fontFamily": "LucidaGrande, Menlo, Monaco, 'Courier New', monospace, 'Apple Color Emoji'", // use Lucida Grande
+	"editor.fontSize": 16,
+
+	// terminal
+	"terminal.integrated.fontFamily": "'Iosevka Fixed', Menlo, monospace, 'Apple Color Emoji'", // use Iosevka Fixed (https://typeof.net/Iosevka/)
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.minimumContrastRatio": 21,
+
+	// ==========
+	// formatting
+	// ==========
+	"editor.formatOnSave": true,
+	"editor.formatOnType": true,
+	"editor.insertSpaces": false, // use tabs
+	"editor.tabSize": 6,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+
+	// =====================
+	// other editor settings
+	// =====================
+
+	// intellisense
+	// https://code.visualstudio.com/docs/editor/intellisense
+	"editor.snippetSuggestions": "top", // always prefer user snippets
+	"editor.tabCompletion": "on",
+
+	// limit number of editors (aka tabs, buffers) per window/split
+	"workbench.editor.limit.enabled": true,
+	"workbench.editor.limit.value": 7,
+
+	// search
+	"editor.find.autoFindInSelection": "multiline",
+	"search.exclude": {
+		// manually exclude common folders since search.useIgnoreFiles is set to false
+		"**/.git/**": true,
+		"**/vendor/**": true
+	},
+	"search.useIgnoreFiles": false, // you only want to ignore gitignored files like half the time
+
+	// ==========
+	// extensions
+	// ==========
+
+	// Vim
+	// https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+	"vim.vimrc.enable": true, // allow your vimrc to configure Vim emulation
+	"vim.vimrc.path": "~/.vimrc",
+
+	// Prettier (a better default formatter)
+	// https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+	"editor.defaultFormatter": "esbenp.prettier-vscode", // override as needed in language settings
+	"prettier.prettierPath": "prettier", // $ which prettier
+	// 	recommended prettier executable installation method
+	// 		$ npm install -g prettier
+
+	// use the same default settings as .prettierrc files
+	"prettier.semi": false, // remove semi-colons from the end of lines in javascript
+	"prettier.useTabs": true,
+
+	// =================
+	// language settings
+	// =================
+
+	// ---
+	// go
+	"go.toolsManagement.autoUpdate": true,
+
+	// ---
+	// markdown
+	"[markdown]": {
+		// allow snippets inside markdown files:
+		"editor.quickSuggestions": {
+			"comments": false,
+			"other": true,
+			"strings": false
+		}
+	},
+
+	// ---
+	// php
+	"[php]": {
+		"editor.defaultFormatter": "junstyle.php-cs-fixer" // https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer
+	},
+	"php-cs-fixer.executablePath": "php-cs-fixer", // $ which php-cs-fixer
+	// 	https://cs.symfony.com
+	// 	recommended php-cs-fixer executable installation method:
+	// 		$ wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O ~/bin/php-cs-fixer
+	// 		$ chmod +x ~/bin/php-cs-fixer
+	// 	(adapted from https://cs.symfony.com/doc/installation.html#globally-manual)
+	"php-cs-fixer.onsave": true, // junstyle.php-cs-fixer doesn't respect editor.formatOnSave
+	"terminal.integrated.inheritEnv": false, // make terminal use homebrew PHP (https://github.com/microsoft/vscode/issues/131534)
+
+	// ---
+	// python
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python", // https://marketplace.visualstudio.com/items?itemName=ms-python.python
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4
+	},
+	"python.analysis.typeCheckingMode": "strict", // https://code.visualstudio.com/docs/python/settings-reference#_python-language-server-settings
+	"python.defaultInterpreterPath": "~/.pyenv/versions/3.10.0rc2/envs/home/bin/python",
+	"python.formatting.provider": "black", // $ which black
+	// 	https://black.readthedocs.io/en/stable/
+	// 	recommended black executable installation method:
+	// 		$ pyenv which pip (make sure you're in the correct venv)
+	// 		$ pip install black (or add to requirements.txt)
+	// 	(there's also a homebrew formula, https://formulae.brew.sh/formula/black, but you'll need a venv anyway)
+
+	// ---
+	// sql
+	"[sql]": {
+		// set up to allow easy formatting using style guide https://gist.github.com/mattmc3/38a85e6a4ca1093816c08d4815fbebfb
+		"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, 'Apple Color Emoji'",
+		"editor.insertSpaces": true,
+		"editor.tabSize": 1
+	},
+
+	// ==================
+	// temporary settings
+	// ==================
+	// (move things here up into appropriate categories to mark them as permanent)
+
+	"php-cs-fixer.lastDownload": 1648576729654 // this is important for some reason
+}

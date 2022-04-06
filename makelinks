@@ -1,0 +1,26 @@
+#!/usr/bin/env fish
+function replace_symlink
+	set source $argv[1]
+	set symlink $argv[2]
+
+	if test -L $symlink
+		echo "removing symlink $symlink"
+		rm $symlink || exit 1
+	else if test -e $symlink
+		echo "$symlink exists and is not a symlink" && exit 1
+	end
+
+	echo "linking $source --> $symlink"
+	ln -s $source $symlink || exit 1
+end
+
+function main
+	set cfg $PWD
+
+	set vscode_userdir "$HOME/Library/Application Support/Code - Insiders/User"
+	replace_symlink $cfg/vscode/settings.json $vscode_userdir/settings.json
+	replace_symlink $cfg/vscode/keybindings.json $vscode_userdir/keybindings.json
+	replace_symlink $cfg/vscode/snippets $vscode_userdir/snippets
+end
+
+main
