@@ -1,0 +1,6 @@
+black
+devtools
+mypy
+ptpython
+thefuck
+typer
