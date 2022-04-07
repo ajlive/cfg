@@ -1,1 +1,32 @@
-{}
+{
+	"array-from-associative": {
+		"prefix": "aa",
+		"body": [
+			"$${1:new} = [];",
+			"foreach ($${2:a} as $${3:k} => $${4:v}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "create a new array from another array treated as associative"
+	},
+	"array-from-auto-indexed": {
+		"prefix": "ax",
+		"body": ["$${1:new} = [];", "foreach ($${2:a} as $${3:v}) {", "\t$0", "}"],
+		"description": "create a new array from another array treated as ordered"
+	},
+	"list-from-list": {
+		"prefix": "ll",
+		"body": ["$${1:l} = [];", "foreach ($${2:a} as $${3:v}) {", "\t$0", "}"],
+		"description": "create an auto-indexed array from another array treated as ordered"
+	},
+	"list-from-map": {
+		"prefix": "lm",
+		"body": [
+			"$${1:l} = [];",
+			"foreach ($${2:a} as $${3:_} => $${4:v}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "create an auto-indexed array from another array treated as associative"
+	}
+}
