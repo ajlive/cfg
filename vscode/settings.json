@@ -95,7 +95,8 @@
 	"[php]": {
 		"editor.defaultFormatter": "junstyle.php-cs-fixer" // https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer
 	},
-	"php-cs-fixer.executablePath": "php-cs-fixer", // $ which php-cs-fixer
+	"php.validate.executablePath": "/opt/homebrew/opt/php@8.0/bin/php",
+	"php-cs-fixer.executablePath": "~/bin/php-cs-fixer",
 	// 	https://cs.symfony.com
 	// 	recommended php-cs-fixer executable installation method:
 	// 		$ wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O ~/bin/php-cs-fixer
