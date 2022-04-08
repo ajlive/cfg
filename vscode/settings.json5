@@ -135,5 +135,6 @@
 	// ==================
 	// (move things here up into appropriate categories to mark them as permanent)
 
-	"php-cs-fixer.lastDownload": 1648576729654 // this is important for some reason
+	"php-cs-fixer.lastDownload": 1649367598078,
+	"editor.renderWhitespace": "all"
 }
