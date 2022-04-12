@@ -10,6 +10,7 @@
 	"window.title": "${activeEditorLong}${separator}${rootName}",
 	"workbench.editor.labelFormat": "medium",
 
+	// fonts
 	"editor.fontFamily": "LucidaGrande, Menlo, Monaco, 'Courier New', monospace, 'Apple Color Emoji'", // use Lucida Grande
 	"editor.fontSize": 16,
 
@@ -139,6 +140,5 @@
 	// ==================
 	// (move things here up into appropriate categories to mark them as permanent)
 
-	"php-cs-fixer.lastDownload": 1649367598078,
-	"editor.renderWhitespace": "all"
+	"php-cs-fixer.lastDownload": 1649367598078
 }
