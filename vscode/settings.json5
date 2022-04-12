@@ -96,6 +96,18 @@
 	},
 
 	// ---
+	// perl
+	"[perl]": {
+		"editor.defaultFormatter": "Kaktus.perltidy-more" // https://marketplace.visualstudio.com/items?itemName=Kaktus.perltidy-more
+	},
+	// 	http://perltidy.sourceforge.net
+	// 	recommended perltidy executable installation method on Mac:
+	// 		$ brew install perltidy
+	// 	on Debian:
+	// 		$ sudo apt install -y perltidy
+	"perltidy-more.autoDisable": true, // won't run if no .perltidyrc in project root
+
+	// ---
 	// php
 	"[php]": {
 		"editor.defaultFormatter": "junstyle.php-cs-fixer" // https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer
