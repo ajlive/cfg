@@ -13,6 +13,10 @@
 	"editor.fontFamily": "LucidaGrande, Menlo, Monaco, 'Courier New', monospace, 'Apple Color Emoji'", // use Lucida Grande
 	"editor.fontSize": 16,
 
+	// brackets
+	"editor.guides.bracketPairs": "active",
+	"editor.bracketPairColorization.enabled": false,
+
 	// terminal
 	"terminal.integrated.fontFamily": "'Iosevka Fixed', Menlo, monospace, 'Apple Color Emoji'", // use Iosevka Fixed (https://typeof.net/Iosevka/)
 	"terminal.integrated.fontSize": 14,
